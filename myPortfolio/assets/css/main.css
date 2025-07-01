@@ -540,6 +540,7 @@ section,
 .hero .herotitle {
   position: relative;
   z-index: 1;
+  color: #000;
 }
 
 .hero h2 {
