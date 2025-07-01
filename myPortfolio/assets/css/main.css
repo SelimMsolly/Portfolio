@@ -668,6 +668,15 @@ section,
   background: #FFE6D0;
 }
 
+.contact-info {
+  display: flex;
+  justify-content: space-between; /* or center / space-around */
+  gap: 2rem; /* space between items */
+  flex-wrap: wrap; /* allow wrapping on small screens */
+  text-align: center;
+  margin-top: 2rem;
+}
+
 .contact iframe{
   width: 100%;
   max-width: 100%;
@@ -683,6 +692,10 @@ section,
   margin: 0 auto;
 }
 
+.contact-info > div {
+  flex: 1;
+  min-width: 200px; /* ensures it doesn’t shrink too much */
+}
 
 @media (max-width: 575px) {
   .contact .info-wrap {
