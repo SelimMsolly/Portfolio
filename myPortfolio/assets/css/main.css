@@ -427,6 +427,23 @@ section,
 }
 
 @media (max-width: 768px) {
+
+  .hero {
+    background-image: url('../img/Background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  
+  .hero-video {
+    display: none;
+  }
+
+  .custom-vertical-line {
+    display: none;
+  }
+  
   .hero h2 {
     font-size: 32px;
   }
@@ -434,6 +451,7 @@ section,
   .hero p {
     font-size: 20px;
   }
+
 }
 
 /*--------------------------------------------------------------
