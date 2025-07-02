@@ -163,6 +163,54 @@ h6 {
   .header~#footer {
     margin-left: 300px;
   }
+
+  
+  .game-video iframe {
+    border: 5px solid #000000;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    height: 500px;
+  }
+
+  .software-video iframe {
+    border: 5px solid #000000;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    height: 500px;
+  }
+
+  .portfolio .portfolio-filters li {
+    display: inline-block;
+  }
+
+  .scroll-track {
+    animation: scroll-left 10s linear infinite;
+  }
+
+  .projects-title {
+    padding-bottom: 20px;
+  }
+
+  .projects-title h2 {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+
+  
+  .scroll-carousel {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .scroll-track img {
+    width: 200px;
+    height: auto;
+  }
+
+
 }
 
 @media (max-width: 1199px) {
@@ -383,6 +431,13 @@ section,
   justify-content: center;
 }
 
+.hero-img {
+  width: 250px;
+  height: auto;
+  border: 5px solid #000;
+  border-radius: 8px;
+}
+
 .titlePosition{
   margin-left: 50px;
 }
@@ -434,6 +489,62 @@ section,
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
+  }
+
+  .game-video iframe {
+    border: 5px solid #000000;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    height: 100vw;
+  }
+
+  .software-video iframe {
+    border: 5px solid #000000;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    height: 100vw;
+  }
+
+  .portfolio-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;              
+  }
+  .portfolio-filters li {
+    display: block; 
+  }
+
+  .projects-title {
+    padding-bottom: 30px;
+  }
+
+  .projects-title h2 {
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+  }
+
+  .scroll-track img {
+    width: 110px;
+    height: auto;
+  }
+
+  .scroll-track {
+    animation: scroll-left 7s linear infinite;
+  }
+
+  
+  .scroll-carousel {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .hero-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .hero-video {
@@ -501,27 +612,19 @@ section,
 # Skills Section
 --------------------------------------------------------------*/
 
-.scroll-carousel {
-  display: flex;
-  width: 100%;
-  overflow: hidden;
-}
-
 .scroll-track {
   display: flex;
-  gap: 60px;
-  animation: scroll-left 20s linear infinite;
+  gap: 10px;
   align-items: center;
+  margin-right: 10px; /* space between duplicated tracks */
 }
 
 .scroll-track img {
-  width: 200px;
-  height: auto;
   flex-shrink: 0;
   border: 2px solid #000;       /* Black border */
   border-radius: 8px;           /* Optional: rounded corners */
   padding: 5px;                 /* Space between image and border */
-  margin: 10px;                 /* Space between images */
+  margin: 10px;
 }
 
 @keyframes scroll-left {
@@ -547,16 +650,16 @@ section,
   text-align: center;
 }
 
+
+
+
 .portfolio .portfolio-filters li {
   cursor: pointer;
-  display: inline-block;
   padding: 0;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 15px;
   margin: 30px;
   line-height: 1;
   text-transform: uppercase;
-  margin-bottom: 10px;
   margin-top: 0;
   transition: all 0.3s ease-in-out;
 }
@@ -566,19 +669,16 @@ section,
   padding: 8px 14px;
   transition: all 0.2s ease;
   font-weight: normal;
-  color: #333;
+  color: #000000;
   transform: scale(1);
 }
 
 .portfolio-filters li:hover {
   font-weight:bold;
-  transform: scale(1.2); /* slightly zooms in */
 }
 
 .portfolio-filters li.filter-active {
   font-weight: bold;
-  transform: scale(1.2); /* stays zoomed in when selected */
-  color: #000; /* optional darker text or highlight */
 }
 
 
@@ -764,6 +864,10 @@ section,
 .portfolio-details{
   background: #ffffff;
 }
+
+
+
+
 
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
