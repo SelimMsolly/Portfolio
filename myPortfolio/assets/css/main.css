@@ -484,7 +484,7 @@ section,
 @media (max-width: 768px) {
 
   .hero {
-    background-image: url('../img/Background.png');
+    background-image: url('../img/Background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
