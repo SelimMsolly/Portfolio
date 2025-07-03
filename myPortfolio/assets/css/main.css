@@ -14,11 +14,7 @@
 
   /* Nav Menu Colors */
   --nav-color: #a8a9b4;  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #040b14; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #000000; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #a8a9b4; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #ffffff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -29,7 +25,7 @@
 }
 
 .dark-background {
-  --background-color: #ffffff;
+  --background-color: #000000;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #151f2b;
@@ -90,11 +86,14 @@ h6 {
   border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
+.game-details {
+  background: #1b2a44;
+}
+
 .header .profile-img img {
   margin: 15px auto;
   display: block;
   width: 120px;
-  border: 8px solid color-mix(in srgb, var(--default-color), transparent 85%);
 }
 
 .header .logo {
@@ -131,8 +130,8 @@ h6 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   margin: 10px;
   border-radius: 50%;
   text-align: center;
@@ -141,21 +140,12 @@ h6 {
   transition: 0.3s;
 }
 
-.custom-vertical-line {
-  position: fixed;
-  top: 0px;        
-  left: 300px;       
-  width: 5px;        
-  height: 100vw;     
-  background-color: black; 
-  z-index: 9999;     
-}
-
 
 .header .social-links a:hover {
-  color: var(--contrast-color);
-  background: var(--accent-color);
+  color:white;
+  background: #1b2a44;
 }
+
 
 @media (min-width: 1200px) {
 
@@ -253,9 +243,10 @@ h6 {
   display: none;
 }
 
+
 .navmenu a,
 .navmenu a:focus {
-  color: #000000;
+  color: #ffffff;
   padding: 15px 10px;
   font-family: var(--nav-font);
   font-size: 16px;
@@ -277,7 +268,7 @@ h6 {
 .navmenu a:hover .navicon,
 .navmenu .active .navicon,
 .navmenu .active:focus .navicon {
-  color: var(--accent-color);
+  color: rgb(27, 42, 68);
 }
 
 /*--------------------------------------------------------------
@@ -431,18 +422,8 @@ section,
   justify-content: center;
 }
 
-.hero-img {
-  width: 250px;
-  height: auto;
-  border: 5px solid #000;
-  border-radius: 8px;
-}
 
-.titlePosition{
-  margin-left: 50px;
-}
-
-.hero-video {
+.hero-background img{
   position: absolute;
   top: 0;
   left: 0;
@@ -453,18 +434,27 @@ section,
   display: block;
 }
 
+
+.hero-img {
+  width: 250px;
+  height: auto;
+  border: 5px solid #000;
+  border-radius: 8px;
+}
+
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 70%);
   position: absolute;
   inset: 0;
   z-index: 2;
 }
 
+
 .hero .herotitle {
   position: relative;
   z-index: 1;
 }
+
 
 .hero h2 {
   margin: 0;
@@ -484,11 +474,15 @@ section,
 @media (max-width: 768px) {
 
   .hero {
-    background-image: url('../img/Background.jpg');
+    background-image: url('../img/mobileBackground.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
+  }
+
+  .hero-background img {
+    display: none;
   }
 
   .game-video iframe {
@@ -550,10 +544,6 @@ section,
   .hero-video {
     display: none;
   }
-
-  .custom-vertical-line {
-    display: none;
-  }
   
   .hero h2 {
     font-size: 32px;
@@ -569,20 +559,13 @@ section,
 # About Section
 --------------------------------------------------------------*/
 .about{
-  background-color: #FFE6D0;
+  background-color: #1b2a44;
 }
 .about .content h2 {
   font-weight: 700;
   font-size: 24px;
 }
 
-.content {
-  position: relative;
-  background-image: url('../img/nintendo.png');
-  background-size: 108%;
-  background-position: 100% center; /* 30% from the left, centered vertically */
-  background-repeat: no-repeat;
-}
 
 
 .about .content ul {
@@ -640,7 +623,7 @@ section,
 # Portfolio Section
 --------------------------------------------------------------*/
 .portfolio{
-  background: #FFE6D0;
+  background: #1b2a44;
 }
 
 .portfolio .portfolio-filters {
@@ -682,11 +665,6 @@ section,
 }
 
 
-.portfolio .portfolio-filters li:hover,
-.portfolio .portfolio-filters li.filter-active {
-  color: var(--accent-color);
-}
-
 .portfolio .portfolio-filters li:first-child {
   margin-left: 0;
 }
@@ -712,8 +690,16 @@ section,
 }
 
 .portfolio-content img{
-  border: 6px solid #000000;
+  border: 6px solid #ffffff;
   border-radius: 20px;
+}
+
+.portfolio-info h3 {
+  color: rgb(255, 255, 255);
+}
+
+.portfolio-info li {
+  color: rgb(255, 255, 255);
 }
 
 
@@ -782,8 +768,9 @@ section,
 # Contact Section
 --------------------------------------------------------------*/
 
+
 .contact{
-  background: #FFE6D0;
+  background: #1b2a44;
 }
 
 .contact-info {
@@ -802,6 +789,12 @@ section,
   display: block;
   border: 0;
 }
+
+
+.col-lg-4 .portfolio-info {
+  background-color: #1b2a44;
+}
+
 
 .contact .info-wrap {
   background-color: var(--surface-color);
@@ -862,7 +855,7 @@ section,
 --------------------------------------------------------------*/
 
 .portfolio-details{
-  background: #ffffff;
+  background: #1b2a44;
 }
 
 
@@ -881,12 +874,12 @@ section,
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet  {
   width: 12px;
   height: 12px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+  background-color: rgb(0, 0, 0);
   opacity: 1;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--accent-color);
+  background-color: rgb(255, 255, 255);
 }
 
 .portfolio-details .portfolio-info {
@@ -920,9 +913,10 @@ section,
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 20px;
+  color: rgb(255, 255, 255);
 }
 
 .portfolio-details .portfolio-description p {
   padding: 0;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: rgb(255, 255, 255);
 }
